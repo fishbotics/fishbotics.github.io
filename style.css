@@ -3,9 +3,15 @@ html {
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100%;
   margin: 10px;
 }
@@ -19,8 +25,11 @@ body {
 }
 
 .whoami {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-top: 20px;
   margin-bottom: 10px;
   margin-left: 10px;
@@ -34,11 +43,15 @@ body {
 }
 
 .whoamiItem.descriptionWrapper {
-  flex-grow: 1;
-  flex-shrink: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
   min-width: 200px;
   max-width: 500px;
-  flex-basis: 350px;
+  -ms-flex-preferred-size: 350px;
+      flex-basis: 350px;
 }
 
 p {
@@ -53,9 +66,13 @@ p {
   background-size: cover;
   background-position: center;
   margin-bottom: 20px;
-  flex-grow: 2;
-  flex-shrink: 0.5;
-  flex-basis: 200px;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  -ms-flex-negative: 0.5;
+      flex-shrink: 0.5;
+  -ms-flex-preferred-size: 200px;
+      flex-basis: 200px;
   min-width: 200px;
   min-height: 200px
 }
@@ -79,8 +96,12 @@ p {
 
 .headerWrapper {
   margin-bottom: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .headerItem {
@@ -90,8 +111,6 @@ p {
 
 a {
   -webkit-transition: color 500ms;
-  -moz-transition: color 500ms;
-  -ms-transition: color 500ms;
   -o-transition: color 500ms;
   transition: color 500ms;
   color: #F1A34C;
@@ -126,10 +145,19 @@ a:hover {
   margin-bottom: 40px;
   margin-left: 10px;
   */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
-	align-items: flex-end;
-  flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+	-webkit-box-align: end;
+	    -ms-flex-align: end;
+	        align-items: flex-end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   font-size: 24px;
 }
 
@@ -141,8 +169,6 @@ a:hover {
 .contactItem svg {
   color: #F1A34C;
   -webkit-transition: color 500ms;
-  -moz-transition: color 500ms;
-  -ms-transition: color 500ms;
   -o-transition: color 500ms;
   transition: color 500ms;
 }
