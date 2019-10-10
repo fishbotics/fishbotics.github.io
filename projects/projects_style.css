@@ -81,7 +81,7 @@ p {
 }
 
 .footerWrapper {
-  margin-bottom: 0px;
+  margin-bottom: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

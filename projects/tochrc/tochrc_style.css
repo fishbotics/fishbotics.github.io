@@ -1,7 +1,6 @@
 .tochrcImage {
-  background-image: url('pull_image.jpeg');
-  max-width: 375px;
-  max-height: 700px;
+  max-width: 580px;
+  max-height: 320px;
   background-size: cover;
   background-position: center;
   margin-bottom: 20px;
@@ -12,6 +11,9 @@
       flex-shrink: 0.5;
   -ms-flex-preferred-size: 200px;
       flex-basis: 200px;
-  min-width: 200px;
-  min-height: 650px
+  min-height: 315px
+}
+
+.projectTitle {
+  font-variant: small-caps;
 }
