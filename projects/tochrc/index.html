@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../projects_style.css">
+    <link rel="stylesheet" type="text/css" href="./tochrc_style.css">
     <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/regular.js" integrity="sha384-V+AkgA1cZ+p3DRK63AHCaXvO68V7B5eHoxl7QVN21zftbkFn/sGAIVR7vmQL3Zhp" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/brands.js" integrity="sha384-VLgz+MgaFCnsFLiBwE3ItNouuqbWV2ZnIqfsA6QRHksEAQfgbcoaQ4PP0ZeS0zS5" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/fontawesome.js" integrity="sha384-treYPdjUrP4rW5q82SnECO7TPVAz4bpas16yuE9F5o7CeBn2YYw1yr5oC8s8Mf8t" crossorigin="anonymous"></script>
@@ -13,7 +14,7 @@
     <div class="body">
       <div>
         <div class="headerWrapper">
-          <div class="headerItem title">Adam Fishman</div>
+          <div class="headerItem title"><a href="../..">Adam Fishman</a></div>
           <div class="contact">
             <div class="contactItem">
               <!-- Script from http://hivelogic.com/enkoder/index.php -->
@@ -88,46 +89,37 @@ while(x=eval(x));
         </div>
         <div class="line"></div>
       </div>
-      <div class="whoami">
-        <div class="whoamiItem image pickleImage">
-        </div>
-        <div class="whoamiItem descriptionWrapper">
+      <div class="project">
+        <div class="projectItem image tochrcImage"></div>
+        <div class="projectItem descriptionWrapper">
           <div class="description">
-            <p>
-            I am a first-year Computer Science PhD student in <a href="https://www.cs.washington.edu">The Allen School at The University of Washington</a>, where I am co-advised by <a href="https://homes.cs.washington.edu/~fox/">Dieter Fox</a> and <a href="https://homes.cs.washington.edu/~seitz/">Steven Seitz</a>. My research interests lie in real-time perception and cognition for robotics and augmented reality.
-            </p>
-            <p>
-            Previously, I worked as a Computer Vision Engineer at Oculus VR. While there, I helped build the SLAM system for <a href="https://www.oculus.com/quest/">Oculus Quest</a>.
-            </p>
-            <p>
-              I like to ride bikes and eat ice cream.
-            </p>
+						<p>
+            Effective human-robot collaboration requires informed anticipation.
+						The robot must simultaneously anticipate and react to the human's actions.
+						Even more, the robot must plan its own actions in a way that accounts for the human predictions, while expecting the human's behavior will change based on what the robot does.
+						The back-and-forth game of prediction and planning is extremely difficult to model using standard techniques.
+						</p>
+						<p>
+						In this work, we exploit the duality between behavior prediction and control to design a novel Model Predictive Control algorithm that simultaneously plans the robot's motion and predicts the human's behavior.
+						We also develop a novel technique for bridging finite-horizon motion optimizers to the problem of spatially consistent continuous optimization.
+						</p>
           </div>
         </div>
       </div>
       <div>
-        <div class="headerWrapper">
-          <div class="headerItem section">News</div>
-        </div>
         <div class="line"></div>
-      </div>
-      <ul class="news">
-        <li>Summer 2019, I interned at NVIDIA's robotics research lab</li>
-        <li>Fall 2019, I received the UW Reality Lab fellowship</li>
-      </ul>
-      <div>
-        <div class="headerWrapper">
-          <div class="headerItem section">Projects</div>
-        </div>
-        <div class="line"></div>
-      </div>
-      <ul class="projects">
-        <li>
-          <a href="./projects/tochrc">
-            Trajectory Optimization for Coordinated Human-Robot Collaboration (2019)
+        <div class="footerWrapper">
+          <a href="https://youtu.be/N3cfHswq4Kw">
+            <div class="headerItem section">
+              Project Video
+            </div>
           </a>
-        </li>
-      </ul>
+          <a href=".">
+            <div class="headerItem section">
+                Code (Available Soon)
+            </div>
+          </a>
+      </div>
     </div>
   </body>
 </html>

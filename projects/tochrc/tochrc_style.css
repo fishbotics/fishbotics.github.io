@@ -1,0 +1,17 @@
+.tochrcImage {
+  background-image: url('pull_image.jpeg');
+  max-width: 375px;
+  max-height: 700px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  -ms-flex-negative: 0.5;
+      flex-shrink: 0.5;
+  -ms-flex-preferred-size: 200px;
+      flex-basis: 200px;
+  min-width: 200px;
+  min-height: 650px
+}
