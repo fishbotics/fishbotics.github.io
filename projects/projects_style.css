@@ -96,6 +96,15 @@ p {
   margin-left: 10px;
 }
 
+.footerItem {
+  display: inline-block;
+  margin-left: 20px;
+  width: 250px;
+  font-size: 24px;
+  margin-right: 20px;
+  text-align: center;
+}
+
 a {
   -webkit-transition: color 500ms;
   -o-transition: color 500ms;
