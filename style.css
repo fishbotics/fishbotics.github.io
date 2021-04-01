@@ -59,12 +59,12 @@ p {
   margin-bottom: 24px;
 }
 
-.pickleImage {
-  background-image: url('pickle.jpg');
+.mushroomImage {
+  background-image: url('mushroom_pic.jpg');
   max-width: 375px;
   max-height: 375px;
   background-size: cover;
-  background-position: center;
+  background-position: top;
   margin-bottom: 20px;
   -webkit-box-flex: 2;
       -ms-flex-positive: 2;
@@ -83,11 +83,6 @@ p {
     overflow: hidden;
 }
 
-.pickle {
-  max-width: 475px;
-  margin-left: -55px;
-  margin-top: -7px;
-}
 
 .line {
   border-bottom: 2px solid #C33C68;
