@@ -62,7 +62,7 @@ p {
 .mushroomImage {
   background-image: url('mushroom_pic.jpg');
   max-width: 375px;
-  max-height: 375px;
+  max-height: 500px;
   background-size: cover;
   background-position: top;
   margin-bottom: 20px;
@@ -74,7 +74,7 @@ p {
   -ms-flex-preferred-size: 200px;
       flex-basis: 200px;
   min-width: 200px;
-  min-height: 200px
+  min-height: 300px
 }
 
 .crop {
