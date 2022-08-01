@@ -14,6 +14,8 @@ body {
           align-items: flex-start;
   height: 100%;
   margin: 10px;
+  background-image: url("background.svg");
+  background-repeat: repeat;
 }
 
 .body {
@@ -180,4 +182,10 @@ a:hover {
 
 .caps {
   font-variant: small-caps;
+}
+
+.attribution {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
 }
