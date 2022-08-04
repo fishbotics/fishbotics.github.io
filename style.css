@@ -183,9 +183,3 @@ a:hover {
 .caps {
   font-variant: small-caps;
 }
-
-.attribution {
-  position: fixed;
-  bottom: 10px;
-  left: 10px;
-}
