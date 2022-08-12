@@ -19,7 +19,7 @@ body {
 }
 
 .body {
-  color: #EC6A43;
+  color: #531BDB;
   height: 600px;
   font-family: Helvetica Neue;
   font-weight: bold;
@@ -87,7 +87,7 @@ p {
 
 
 .line {
-  border-bottom: 2px solid #C33C68;
+  border-bottom: 2px solid #F553AD;
   width: 100%;
 }
 
@@ -110,12 +110,28 @@ a {
   -webkit-transition: color 500ms;
   -o-transition: color 500ms;
   transition: color 500ms;
-  color: #F1A34C;
+  color: #EB5609;
   text-decoration: none;
 }
 
 a:hover {
-  color: #C33C68;
+  color: #F553AD;
+}
+
+table .label {
+  text-align: left;
+  vertical-align: top;
+  white-space: nowrap;
+}
+table .info {
+  text-align: left;
+  vertical-align: top;
+  padding-left: 10px;
+}
+
+table {
+  padding-left: 40px;
+  margin-top: 16px;
 }
 
 .title {
@@ -171,7 +187,7 @@ a:hover {
 }
 
 .contactItem svg:hover {
-  color: #C33C68;
+  color: #F553AD;
 }
 
 .contact p {
@@ -182,4 +198,9 @@ a:hover {
 
 .caps {
   font-variant: small-caps;
+}
+
+.attributions {
+  text-align: center;
+  margin-top: 5px;
 }
