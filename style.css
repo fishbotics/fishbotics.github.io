@@ -130,7 +130,8 @@ table .info {
 }
 
 table {
-  padding-left: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
   margin-top: 16px;
 }
 
