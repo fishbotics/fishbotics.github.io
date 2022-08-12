@@ -62,7 +62,7 @@ p {
 }
 
 .mushroomImage {
-  background-image: url('mushroom_pic.jpg');
+  background-image: url('mushroom_gif.gif');
   max-width: 375px;
   max-height: 500px;
   background-size: cover;
@@ -118,6 +118,10 @@ a:hover {
   color: #F553AD;
 }
 
+td {
+  padding-bottom: 5px;
+}
+
 table .label {
   text-align: left;
   vertical-align: top;
@@ -133,6 +137,7 @@ table {
   margin-left: 10px;
   margin-right: 10px;
   margin-top: 16px;
+  margin-bottom: 34px;
 }
 
 .title {
@@ -204,4 +209,18 @@ table {
 .attributions {
   text-align: center;
   margin-top: 5px;
+}
+
+#publications {
+  list-style-type: none; /* Remove bullets */
+  padding-left: 10px;
+  margin-bottom: 39px;
+}
+
+#publications li {
+  padding-bottom: 5px;
+}
+
+.me {
+  color: #F553AD;
 }
