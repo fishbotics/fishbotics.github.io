@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="163.75473mm"
-   height="247.03885mm"
-   viewBox="0 0 163.75473 247.03886"
+   width="159.48155mm"
+   height="242.99365mm"
+   viewBox="0 0 159.48155 242.99366"
    version="1.1"
    id="svg8"
    sodipodi:docname="background.svg"
@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.88269809"
-     inkscape:cx="90.256707"
-     inkscape:cy="385.42152"
+     inkscape:zoom="0.62416181"
+     inkscape:cx="-212.40898"
+     inkscape:cy="664.0641"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -51,7 +51,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(3.09497,4.5350447)"
+     transform="translate(-4.8425303,-4.454494)"
      style="opacity:0.20364745">
     <g
        id="g1017"
@@ -147,11 +147,11 @@
          id="color-4">
         <polygon
            id="polygon1160"
-           points="28,29.175 29.924,27.251 34.842,29.347 34.424,33 28.962,33.024 28,31.1 "
+           points="28.962,33.024 28,31.1 28,29.175 29.924,27.251 34.842,29.347 34.424,33 "
            style="fill:#d0cfce" />
         <polygon
            id="polygon1162"
-           points="36.057,53.886 33.644,51 30.758,51 24.875,57.359 22.835,59.475 23.493,61.1 35.742,56.2 "
+           points="22.835,59.475 23.493,61.1 35.742,56.2 36.057,53.886 33.644,51 30.758,51 24.875,57.359 "
            style="fill:#d0cfce" />
         <polyline
            id="polyline1164"
@@ -439,17 +439,17 @@
            style="fill:#d0cfce" />
         <polygon
            id="polygon1213"
-           points="44.83,48.92 40.74,48.7 40.74,44.05 43.53,42.19 47.25,45.91 "
+           points="47.25,45.91 44.83,48.92 40.74,48.7 40.74,44.05 43.53,42.19 "
            transform="matrix(1.299,0,0,1.299,-10.1,-9.952)"
            style="fill:#d0cfce" />
         <polygon
            id="polygon1215"
-           points="25.85,41.73 37.95,41.73 39.81,43.59 39.81,48.24 37.95,50.1 25.85,50.1 23.99,48.24 23.99,43.59 "
+           points="37.95,50.1 25.85,50.1 23.99,48.24 23.99,43.59 25.85,41.73 37.95,41.73 39.81,43.59 39.81,48.24 "
            transform="matrix(1.299,0,0,1.299,-8.357,-9.905)"
            style="fill:#d0cfce" />
         <polygon
            id="polygon1217"
-           points="46.89,45.91 43.5,42.52 44.35,33.18 46.04,23.84 51.14,20.45 57.08,23 57.08,28.09 49.44,45.06 "
+           points="51.14,20.45 57.08,23 57.08,28.09 49.44,45.06 46.89,45.91 43.5,42.52 44.35,33.18 46.04,23.84 "
            transform="matrix(1.299,0,0,1.299,-10.1,-9.952)"
            style="fill:#d0cfce" />
         <path
@@ -836,11 +836,11 @@
            style="fill:#f4aa41;stroke:none" />
         <polygon
            id="polygon1460"
-           points="30.4167,49.6688 30.3333,53.5021 31.0833,57.0021 32.1667,58.9188 35,60.4188 39.5833,59.8355 41.1667,58.0855 42.1667,53.8355 41.9167,49.8355 39.9167,50.0855 36,47.2521 32.9167,49.6688 "
+           points="35,60.4188 39.5833,59.8355 41.1667,58.0855 42.1667,53.8355 41.9167,49.8355 39.9167,50.0855 36,47.2521 32.9167,49.6688 30.4167,49.6688 30.3333,53.5021 31.0833,57.0021 32.1667,58.9188 "
            style="fill:#ea5a47;stroke:none" />
         <polygon
            id="polygon1462"
-           points="34.3333,42.4188 38.6667,42.5855 41.5833,40.3355 39.8333,37.0855 32.5,36.9188 30.9167,40.6688 33.0833,41.9188 "
+           points="32.5,36.9188 30.9167,40.6688 33.0833,41.9188 34.3333,42.4188 38.6667,42.5855 41.5833,40.3355 39.8333,37.0855 "
            style="fill:#3f3f3f;stroke:none" />
       </g>
       <g
@@ -1180,5 +1180,5 @@
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="Layer 2"
-     transform="translate(24.352756,22.406446)" />
+     transform="translate(16.415255,13.416908)" />
 </svg>
