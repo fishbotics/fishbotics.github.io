@@ -223,3 +223,7 @@ table {
 .me {
   color: #F553AD;
 }
+
+.secret {
+  text-decoration: underline;
+}
