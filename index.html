@@ -9,6 +9,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script defer src="script.js" type="module"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/regular.js" integrity="sha384-V+AkgA1cZ+p3DRK63AHCaXvO68V7B5eHoxl7QVN21zftbkFn/sGAIVR7vmQL3Zhp" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/brands.js" integrity="sha384-VLgz+MgaFCnsFLiBwE3ItNouuqbWV2ZnIqfsA6QRHksEAQfgbcoaQ4PP0ZeS0zS5" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/fontawesome.js" integrity="sha384-treYPdjUrP4rW5q82SnECO7TPVAz4bpas16yuE9F5o7CeBn2YYw1yr5oC8s8Mf8t" crossorigin="anonymous"></script>
@@ -151,10 +152,30 @@ while(x=eval(x));
           (<a href="./projects/collaborative-behavior-models" target="_blank" >Website</a>, <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9341369&tag=1" target="_blank" >Paper</a>)
         </li>
       </ul>
+      <div id="audio-player-container">
+        <div id="audio-player">
+          <p class="audio-player-text">
+          <span class="audio-player-no">One Fish, Two Fish by <a href="https://ayanna-woods.com/" target="_blank" >Ayanna Woods</a></span>
+          </p>
+          <audio src="theme.mp3" preload="metadata" loop></audio>
+          <div>
+            <button id="play-icon"></button>
+            <span id="current-time" class="time">0:00</span>
+            <input type="range" id="seek-slider" max="100" value="0">
+            <span id="duration" class="time">0:00</span>
+          </div>
+          <div>
+            <output id="volume-output">100</output>
+            <input type="range" id="volume-slider" max="100" value="100">
+            <button id="mute-icon"></button>
+          </div>
+        </div>
+      </div>
 			<div class="line"></div>
 			<div class="attributions">
 				<a href="./attribution">Design Attributions</a>
 			</div>
+      <div id="footer"></div>
     </div>
   </body>
 </html>
