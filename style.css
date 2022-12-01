@@ -269,11 +269,13 @@ button {
     left: -2px;
     top: -2px;
     background: linear-gradient(to left, #F553AD, #EB5609);
-    z-index: -1;
+    z-index: -2;
 }
+
 #play-icon {
     margin: 20px 2.5% 10px 2.5%;
 }
+
 path {
     stroke: #007db5;
 }
@@ -409,20 +411,26 @@ input[type="range"]:active::-ms-thumb {
     background: #007db5;
 }
 
-.audio-player-text {
-    position: absolute;
-    top: -18px;
-    right: 5%;
-    padding: 0 5px;
-    margin: 0;
-    font-size: 28px;
-    background: #fff;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 175px;
+#audio-player-marquee {
+  position: absolute;
+  top: -18px;
+  right: 5%;
+  padding: 3px;
+  background: linear-gradient(to left, #F553AD, #531BDB);
+  margin: 0;
 }
 
-.audio-player-text span {
+#audio-player-text {
+  margin: 0;
+  padding: 0 5px;
+  font-size: 28px;
+  background: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 175px;
+}
+
+#audio-player-text span {
   display: inline-block;
   padding-left: 100%;
   animation: marquee 12s linear infinite;
