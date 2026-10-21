@@ -61,13 +61,10 @@ p {
   margin-bottom: 24px;
 }
 
-.mushroomImage {
-  background-image: url('mushroom_gif.gif');
+.whoamiItem.profileImage {
+  display: block;
+  align-self: flex-start;
   max-width: 375px;
-  max-height: 500px;
-  background-size: cover;
-  background-position: top;
-  margin-bottom: 20px;
   -webkit-box-flex: 2;
       -ms-flex-positive: 2;
           flex-grow: 2;
@@ -76,7 +73,12 @@ p {
   -ms-flex-preferred-size: 200px;
       flex-basis: 200px;
   min-width: 200px;
-  min-height: 300px
+}
+
+.profileImage img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .crop {
@@ -221,7 +223,7 @@ table {
 }
 
 #publications li {
-  padding-bottom: 5px;
+  padding-bottom: 8px;
 }
 
 .me {

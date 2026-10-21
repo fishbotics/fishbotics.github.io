@@ -1,5 +1,6 @@
 /** Implementation of the presentation of the audio player */
 import lottieWeb from 'https://cdn.skypack.dev/lottie-web';
+import { LoopingAudio } from './looping-audio.js';
 
 const playIconContainer = document.getElementById('play-icon');
 const audioPlayerContainer = document.getElementById('audio-player');
@@ -29,17 +30,27 @@ const muteAnimation = lottieWeb.loadAnimation({
 
 playAnimation.goToAndStop(14, true);
 
-playIconContainer.addEventListener('click', () => {
+playIconContainer.addEventListener('click', async () => {
     if(playState === 'play') {
-        audio.play();
-        playAnimation.playSegments([14, 27], true);
-        requestAnimationFrame(whilePlaying);
-        playState = 'pause';
+        playIconContainer.disabled = true;
+        try {
+            await audio.play();
+            playAnimation.playSegments([14, 27], true);
+            raf = requestAnimationFrame(whilePlaying);
+            playState = 'pause';
+            playIconContainer.title = 'Pause';
+        } catch (error) {
+            console.error('Unable to play audio', error);
+            playIconContainer.title = 'Unable to load audio. Click to retry.';
+        } finally {
+            playIconContainer.disabled = false;
+        }
     } else {
         audio.pause();
         playAnimation.playSegments([0, 14], true);
         cancelAnimationFrame(raf);
         playState = 'play';
+        playIconContainer.title = 'Play';
     }
 });
 
@@ -53,6 +64,7 @@ muteIconContainer.addEventListener('click', () => {
         audio.muted = false;
         muteState = 'unmute';
     }
+    audio.updateVolume();
 });
 
 const showRangeProgress = (rangeInput) => {
@@ -73,7 +85,12 @@ volumeSlider.addEventListener('input', (e) => {
 
 /** Implementation of the functionality of the audio player */
 
-const audio = document.querySelector('audio');
+const media = document.querySelector('audio');
+const audio = new LoopingAudio(media.src, () => {
+    displayDuration();
+    setSliderMax();
+    audioPlayerContainer.style.setProperty('--buffered-width', '100%');
+});
 const durationContainer = document.getElementById('duration');
 const currentTimeContainer = document.getElementById('current-time');
 const outputContainer = document.getElementById('volume-output');
@@ -87,15 +104,17 @@ const calculateTime = (secs) => {
 }
 
 const displayDuration = () => {
-    durationContainer.textContent = calculateTime(audio.duration);
+    durationContainer.textContent = calculateTime(audio.duration || media.duration);
 }
 
 const setSliderMax = () => {
-    seekSlider.max = Math.floor(audio.duration);
+    seekSlider.max = audio.duration || media.duration;
+    seekSlider.disabled = !audio.duration;
 }
 
 const displayBufferedAmount = () => {
-    const bufferedAmount = Math.floor(audio.buffered.end(audio.buffered.length - 1));
+    if (audio.duration || !media.buffered.length) return;
+    const bufferedAmount = media.buffered.end(media.buffered.length - 1);
     audioPlayerContainer.style.setProperty('--buffered-width', `${(bufferedAmount / seekSlider.max) * 100}%`);
 }
 
@@ -106,19 +125,20 @@ const whilePlaying = () => {
     raf = requestAnimationFrame(whilePlaying);
 }
 
-if (audio.readyState > 0) {
+seekSlider.disabled = true;
+if (media.readyState > 0) {
     displayDuration();
     setSliderMax();
     displayBufferedAmount();
 } else {
-    audio.addEventListener('loadedmetadata', () => {
+    media.addEventListener('loadedmetadata', () => {
         displayDuration();
         setSliderMax();
         displayBufferedAmount();
     });
 }
 
-audio.addEventListener('progress', displayBufferedAmount);
+media.addEventListener('progress', displayBufferedAmount);
 
 seekSlider.addEventListener('input', () => {
     currentTimeContainer.textContent = calculateTime(seekSlider.value);
@@ -130,7 +150,7 @@ seekSlider.addEventListener('input', () => {
 seekSlider.addEventListener('change', () => {
     audio.currentTime = seekSlider.value;
     if(!audio.paused) {
-        requestAnimationFrame(whilePlaying);
+        raf = requestAnimationFrame(whilePlaying);
     }
 });
 
@@ -139,4 +159,5 @@ volumeSlider.addEventListener('input', (e) => {
 
     outputContainer.textContent = value;
     audio.volume = value / 100;
+    audio.updateVolume();
 });
