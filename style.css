@@ -231,7 +231,39 @@ table {
 }
 
 .secret {
+  display: inline-block;
   text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .secret:not(.is-active) {
+    animation: secret-bounce 6s ease-in-out 4s infinite;
+  }
+
+  .secret:nth-of-type(2) {
+    animation-delay: 4.25s;
+  }
+
+  .secret:nth-of-type(3) {
+    animation-delay: 4.5s;
+  }
+
+  .secret:hover {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes secret-bounce {
+  0%, 10%, 20%, 100% {
+    transform: translateY(0);
+  }
+  5% {
+    transform: translateY(-3px);
+  }
+  15% {
+    transform: translateY(-1.5px);
+  }
 }
 
 button {
