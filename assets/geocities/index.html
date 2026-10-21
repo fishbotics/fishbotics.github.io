@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adam's Icon Collection</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 36px 20px; background: #285e65; color: #241b3c; font: 13px/1.5 Monaco, Consolas, monospace; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    .window { max-width: 1040px; margin: auto; padding: 4px; background: #c8c8cc; border: 2px solid; border-color: #fff #454051 #454051 #fff; box-shadow: 8px 8px 0 #183e47; }
+    .titlebar { display: flex; align-items: center; gap: 9px; padding: 6px 9px; background: #362784; color: #fff9e8; font-weight: bold; }
+    .titlebar img { width: 24px; height: 24px; }
+    .titlebar span:last-child { margin-left: auto; color: #d6c8ff; font-size: 11px; }
+    header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; padding: 20px 24px 18px; }
+    h1 { margin: 0 0 3px; font: bold 25px/1.2 Georgia, serif; letter-spacing: -.5px; }
+    header p { margin: 0; font-size: 11px; }
+    .stamp { border: 1px solid #706979; padding: 4px 9px; color: #362784; font-size: 10px; background: #dad6e3; }
+    .toolbar { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; padding: 0 24px 16px; }
+    .toolbar .divider { height: 22px; border-left: 1px solid #8a8393; margin: 0 6px; }
+    button, .download { font: inherit; font-size: 11px; padding: 5px 10px; cursor: pointer; color: #241b3c; background: #dedde0; border: 2px solid; border-color: #fff #625d70 #625d70 #fff; text-decoration: none; }
+    button[aria-pressed="true"] { background: #c0b9da; border-color: #625d70 #fff #fff #625d70; }
+    :focus-visible { outline: 2px dashed #7046d9; outline-offset: 3px; }
+    .download { margin-left: auto; }
+    .sheet { --surface: #fff9e8; --text: #241b3c; --line: #e9e1ce; margin: 0 16px 16px; border: 2px solid; border-color: #777081 #fff #fff #777081; color: var(--text); background-color: var(--surface); }
+    .sheet.night { --surface: #211a37; --text: #fff9e8; --line: #3c3156; }
+    .grid { display: grid; grid-template-columns: repeat(5, 1fr); }
+    .icon { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 178px; padding: 18px 10px 16px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); color: inherit; text-decoration: none; }
+    .icon:nth-child(5n) { border-right: 0; }
+    .icon:nth-last-child(-n+5) { border-bottom: 0; }
+    .icon:hover { background: #7046d910; }
+    .icon img { width: var(--size, 96px); height: var(--size, 96px); image-rendering: pixelated; }
+    .icon span { margin-top: 14px; font-size: 11px; }
+    .icon small { position: absolute; left: 10px; top: 7px; font-size: 9px; opacity: .4; }
+    .sheet.tile { min-height: 540px; background-image: url("background.svg?v=2"); background-position: 0 0; }
+    .sheet.tile .grid { display: none; }
+    footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin: 0 16px 12px; padding: 7px 9px; border: 1px solid; border-color: #8f8999 #eee #eee #8f8999; font-size: 10px; }
+    footer a { color: #362784; }
+    @media (max-width: 680px) {
+      body { padding: 16px 8px; }
+      header { padding: 16px 12px; }
+      .toolbar { padding: 0 12px 14px; }
+      .grid { grid-template-columns: repeat(3, 1fr); }
+      .icon { min-height: 166px; }
+      .icon:nth-child(n) { border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+      .icon:nth-child(3n) { border-right: 0; }
+      .icon:nth-last-child(-n+3) { border-bottom: 0; }
+      .sheet { margin: 0 8px 12px; }
+      .download { margin-left: 0; }
+      .titlebar span:last-child { display: none; }
+      .stamp { display: none; }
+      footer { margin: 0 8px 8px; }
+    }
+    @media (max-width: 390px) {
+      .grid { grid-template-columns: repeat(2, 1fr); }
+      .icon:nth-child(n) { border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+      .icon:nth-child(2n) { border-right: 0; }
+      .icon:last-child { border-bottom: 0; }
+    }
+  </style>
+</head>
+<body>
+  <main class="window">
+    <div class="titlebar"><img src="floppy-disk.svg" alt=""><span>Adam's Icon Collection</span><span>EST. 1996*</span></div>
+    <header><div><h1>A little more GeoCities.</h1><p>Bikes, bytes &amp; everything in between.</p></div><span class="stamp">15 ICONS · 48 × 48</span></header>
+    <div class="toolbar" aria-label="Preview controls">
+      <button type="button" id="icons" aria-pressed="true">Icons</button>
+      <button type="button" id="tile" aria-pressed="false">Background</button>
+      <span class="divider" aria-hidden="true"></span>
+      <button type="button" id="paper" aria-pressed="true">Light</button>
+      <button type="button" id="night" aria-pressed="false">Dark</button>
+      <span class="divider" aria-hidden="true"></span>
+      <button type="button" id="native" aria-pressed="false">1×</button>
+      <button type="button" id="double" aria-pressed="true">2×</button>
+      <a class="download" href="background.svg?v=2" download>Save background ↓</a>
+    </div>
+    <section class="sheet" aria-label="GeoCities icon preview">
+      <div class="grid">
+        <a class="icon" href="bicycle.svg"><small>01</small><img src="bicycle.svg" alt=""><span>Bicycle</span></a>
+        <a class="icon" href="robot.svg"><small>02</small><img src="robot.svg" alt=""><span>Robot</span></a>
+        <a class="icon" href="floppy-disk.svg"><small>03</small><img src="floppy-disk.svg" alt=""><span>Floppy disk</span></a>
+        <a class="icon" href="robotic-arm.svg"><small>04</small><img src="robotic-arm.svg" alt=""><span>Robotic arm</span></a>
+        <a class="icon" href="bread.svg"><small>05</small><img src="bread.svg" alt=""><span>Bread</span></a>
+        <a class="icon" href="brain.svg"><small>06</small><img src="brain.svg" alt=""><span>Brain</span></a>
+        <a class="icon" href="dog-face.svg"><small>07</small><img src="dog-face.svg" alt=""><span>Dog face</span></a>
+        <a class="icon" href="lemon.svg"><small>08</small><img src="lemon.svg" alt=""><span>Lemon</span></a>
+        <a class="icon" href="evergreen.svg"><small>09</small><img src="evergreen.svg" alt=""><span>Evergreen tree</span></a>
+        <a class="icon" href="pizza.svg"><small>10</small><img src="pizza.svg" alt=""><span>Pizza</span></a>
+        <a class="icon" href="mountains.svg"><small>11</small><img src="mountains.svg" alt=""><span>Mountains</span></a>
+        <a class="icon" href="dog.svg"><small>12</small><img src="dog.svg" alt=""><span>Dog</span></a>
+        <a class="icon" href="treble-clef.svg"><small>13</small><img src="treble-clef.svg" alt=""><span>Treble clef</span></a>
+        <a class="icon" href="chili-pepper.svg"><small>14</small><img src="chili-pepper.svg" alt=""><span>Chili pepper</span></a>
+        <a class="icon" href="robotic-leg.svg"><small>15</small><img src="robotic-leg.svg" alt=""><span>Robotic leg</span></a>
+      </div>
+    </section>
+    <footer><span>Click an icon to open its SVG.</span><span>Transparent backgrounds · *In spirit.</span></footer>
+  </main>
+  <script>
+    const sheet = document.querySelector('.sheet');
+    function pair(first, second, apply) {
+      for (const id of [first, second]) {
+        document.getElementById(id).addEventListener('click', () => {
+          document.getElementById(first).setAttribute('aria-pressed', String(id === first));
+          document.getElementById(second).setAttribute('aria-pressed', String(id === second));
+          apply(id === second);
+        });
+      }
+    }
+    pair('icons', 'tile', enabled => sheet.classList.toggle('tile', enabled));
+    pair('paper', 'night', enabled => sheet.classList.toggle('night', enabled));
+    pair('native', 'double', enabled => sheet.style.setProperty('--size', enabled ? '96px' : '48px'));
+  </script>
+</body>
+</html>

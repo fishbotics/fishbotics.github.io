@@ -14,13 +14,14 @@ body {
           align-items: flex-start;
   height: 100%;
   margin: 10px;
-  background-image: url("background.png");
+  background-image: url("assets/geocities/background.svg?v=2");
   background-repeat: repeat;
 }
 
 .body {
   color: #531BDB;
-  height: 600px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0 16px;
   font-family: Helvetica Neue;
   font-weight: bold;
   width: 940px;
